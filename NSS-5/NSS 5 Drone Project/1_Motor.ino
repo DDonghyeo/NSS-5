@@ -8,7 +8,9 @@ void InitMotor()
 {
   for(uint8_t i = 0; i < 4; i++) Motor[i].attach(MotorPin[i], 1000, 2000);
 }
-
+void main()
+{
+  
 void WriteMotor(uint8_t i, int16_t raw)
 {
   Motor[i].writeMicroseconds(constrain(raw, 1000, 2000));
